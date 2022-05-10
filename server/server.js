@@ -10,7 +10,7 @@ mongoose.connect(process.env.DB);
 
 //ROUTES
 const defaultRoute = require("./routes/index.js")
-const customersRoute = require("./routes/customers.js")
+const customersRoute = require("./routes/clients.js")
 const phonesRoute = require("./routes/phones.js")
 const ordersRoute = require("./routes/orders.js")
 app.use(cors());
@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 //ROUTES
 app.use("/", defaultRoute)
-app.use("/customers", customersRoute)
+app.use("/clients", customersRoute)
 app.use("/orders", ordersRoute)
 app.use("/phones", phonesRoute)
 
